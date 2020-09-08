@@ -1,5 +1,5 @@
 <template>
-  <div>Top page</div>
+  <b-container>Top page</b-container>
 </template>
 
 <script>
