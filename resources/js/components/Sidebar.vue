@@ -36,15 +36,15 @@
 export default {
   name: 'SideBar',
 
-  data() {
-    return{
-      isSidebarActive: false,
-    }
+  computed: {
+    isSidebarActive() {
+      return this.$store.state.isSidebarActive
+    },
   },
 
   methods: {
     onClickMenu() {
-      this.isSidebarActive = !this.isSidebarActive
+      this.$store.commit('toggleSidebar')
     }
   }
 }

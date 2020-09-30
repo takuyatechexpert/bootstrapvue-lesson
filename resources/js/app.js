@@ -6,7 +6,7 @@
 import Vue from 'vue'
 import Top from './Pages/Top.vue'
 import router from './routers'
-
+import store from './store'
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -33,6 +33,7 @@ Vue.component('top', Top)
 const app = new Vue({
     el: '#app',
     router,
+    store,
 });
 
 export default app
