@@ -17,7 +17,7 @@
 </head>
 <body>
   <div id="app">
-    <top />
+    <main-container />
   </div>
 </body>
 </html>
