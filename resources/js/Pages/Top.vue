@@ -1,7 +1,6 @@
 <template>
 <div>
-  <sidebar />
-  <b-container>Top page</b-container>
+  Top page
 </div>
 </template>
 
@@ -11,8 +10,6 @@ import Sidebar from '../components/Sidebar.vue'
 export default {
   name: 'Top',
 
-  components: {
-    Sidebar,
-  }
 }
 </script>
+ 
