@@ -1,11 +1,11 @@
 <template>
   <div class="sidebar" :class="{ active: isSidebarActive }">
     <div class="sidebar-top">
-    <div class="sidebar-menu">
-      <b-link @click="onClickMenu">
-      <img class="sidebar-icon" src="/images/sidebar/menu.png">
+      <b-link class="hamburger_btn" @click="onClickMenu">
+        <span class="line line_01" v-bind:class="{'btn_line01': isSidebarActive}"></span>
+        <span class="line line_02" v-bind:class="{'btn_line02': isSidebarActive}"></span>
+        <span class="line line_03" v-bind:class="{'btn_line03': isSidebarActive}"></span>
       </b-link>
-    </div>
     </div>
     <ul class="sidebar-list">
       <li class="sidebar-item">
@@ -51,6 +51,51 @@ export default {
 </script>
 
 <style scoped>
+.hamburger_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 66px;
+  height: 72px;
+}
+
+.hamburger_btn .line {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 32px;
+  height: 2px;
+  background: #333333;
+  text-align: center;
+}
+
+.hamburger_btn .line_01 {
+  top: 10px;
+  transition: 0.4s ease;
+}
+.hamburger_btn .line_02 {
+  top: 20px;
+  transition: 0.4s ease;
+}
+.hamburger_btn .line_03 {
+  top: 30px;
+  transition: 0.4s ease;
+}
+
+
+.btn_line01 {
+  transform: translateY(10px) rotate(-45deg);
+  transition: 0.4s ease;
+}
+.btn_line02 {
+  transition: 0.4s ease;
+  opacity: 0;
+}
+.btn_line03 {
+  transform: translateY(-10px) rotate(45deg);
+  transition: 0.4s ease;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -67,13 +112,6 @@ export default {
 
 .sidebar-top {
   height: 50px;
-}
-
-.sidebar-menu {
-  position: absolute;
-  top:10px;
-  right: 15px;
-  width: 30px;
 }
 
 .sidebar-icon {
