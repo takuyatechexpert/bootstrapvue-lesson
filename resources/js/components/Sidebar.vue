@@ -9,11 +9,11 @@
     </div>
     <ul class="sidebar-list">
       <li class="sidebar-item">
-        <b-link to="#" class="sidebar-link" :class="{ active: isSidebarActive }"><img class="sidebar-icon" :class="{ active: isSidebarActive }" src="/images/sidebar/home.png">
+        <b-link to="/" class="sidebar-link" :class="{ active: isSidebarActive }"><img class="sidebar-icon" :class="{ active: isSidebarActive }" src="/images/sidebar/home.png">
         <span class="sidebar-text" v-show="isSidebarActive">ホーム</span></b-link>
       </li>
       <li class="sidebar-item">
-        <b-link to="#" class="sidebar-link"><img class="sidebar-icon" :class="{ active: isSidebarActive }" src="/images/sidebar/post.png">
+        <b-link to="/post/new" class="sidebar-link"><img class="sidebar-icon" :class="{ active: isSidebarActive }" src="/images/sidebar/post.png">
         <span class="sidebar-text" v-show="isSidebarActive">投稿</span></b-link>
       </li>
       <li class="sidebar-item">
