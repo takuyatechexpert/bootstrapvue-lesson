@@ -2,6 +2,9 @@
 <div>
   <main class="main-content" :class="{ shrunked: isSidebarActive }">
     <sidebar />
+    <header class="text-right mr-3">
+      user name
+    </header>
     <router-view />
   </main>
 </div>
